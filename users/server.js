@@ -1,0 +1,12 @@
+const express = require('express')
+const expressGraphQL = require('express-graphql')
+
+const app = express()
+
+app.use('/graphql', expressGraphQL({
+    graphiql: true //development tool
+}))
+
+app.listen(4000, () => {
+    console.log('Here I am')
+})
