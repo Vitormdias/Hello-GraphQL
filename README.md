@@ -175,3 +175,59 @@ query {
 * To remove circular reference define in it a
   arrow function, then it will only define the 
   function but will only be executed later
+
+## Query
+
+* Naming querys to reuse
+```
+query findCompany {
+  company(id: "2") {
+    name,
+    users {
+      firstName
+    }
+  }
+}
+
+```
+
+* Renaming results
+```
+{
+  apple: company(id: "1") {
+    name,
+    users {
+      firstName
+    }
+  },
+  google: company(id: "2") {
+    name,
+    users {
+      firstName
+    }
+  }
+}
+
+```
+
+* Query fragments
+  - Used to reuse props that we are asking for
+  - on YourType
+  - Used more in the Front-End
+
+```
+{
+  apple: company(id: "1") {
+    ...companyDetails
+  },
+  google: company(id: "2") {
+    ...companyDetails
+  }
+}
+
+fragment companyDetails on Company {
+  id
+  name
+  description
+}
+```
