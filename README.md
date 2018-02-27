@@ -134,3 +134,44 @@ query {
     for the promise to resolve and 
     returns its value
   - it can fetch any type of data
+
+* Resolve functions allow you to move inside
+  the graph
+
+## Props
+
+* When the prop has the same name it associates it
+  normally
+
+* When it comes companyId, use resolve function to
+  populate the property 
+
+* Nested query
+
+```
+{
+  user(id: "23") {
+    firstName,
+    company {
+      name
+    }
+  }
+}
+```
+
+* Bidirectional relation
+
+```
+{
+  company(id: "2") {
+    name,
+    users {
+      firstName
+    }
+  }
+}
+```
+
+* To remove circular reference define in it a
+  arrow function, then it will only define the 
+  function but will only be executed later
