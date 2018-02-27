@@ -231,3 +231,23 @@ fragment companyDetails on Company {
   description
 }
 ```
+
+## Mutations
+
+* Used to manipulate data
+
+* ex: addUser, deleteUser
+
+* Tied to the Mutations object not Types
+
+* Fields describes the mutation
+
+```
+mutation {
+  addUser(firstName: "Steven", age: 26) {
+    id,
+    firstName,
+    age
+  }
+}
+```
