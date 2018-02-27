@@ -251,3 +251,41 @@ mutation {
   }
 }
 ```
+
+## Frameworks
+
+### Front-End
+
+* Lokka
+  - As simple as possible, basic queries
+    mutation, some simple caching
+
+* Apollo Client
+  - Produced by the same guys as Meteor JS,
+    good balance between features and complexity
+    (Apollo Stack)
+  - Most recommended
+
+* Relay
+  - Amazingly performance for mobile, by far
+    the most insanely complex
+  - Built for mobile performance with bad
+    internet (used by facebook), not recommended
+    to smaller projects
+
+### Back-End
+
+* Express-GraphQL
+  - Not a part of apollo
+  - Oficial implementation of GraphQL
+    by Facebook
+  - More stable
+  - Big objects with fields and resolve
+    functions
+
+* Apollo Server
+  - Can have big API changes
+  - Types File
+  - Resolvers File
+  - Not a bad decision, just a different
+    one
