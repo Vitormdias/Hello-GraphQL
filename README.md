@@ -88,3 +88,49 @@ query {
 * Root query
   - Allows us to jump into the data scheme
   - Entrypoint to our data
+
+* Not JS
+```
+  {
+    user(id: "23") {
+      id,
+      firsrName,
+      age
+    }
+  }
+```
+  - query is sent to the root query
+  - user key inside of fields
+  - there it finds id in args
+  - after graphQL resolves the query
+  - returns raw data in the resolves
+  - graphQL takes care to convert it
+    to the correct data with the specified
+    fields
+  - if error in the query it helps you with
+    the description
+
+* GraphiQL
+  - Visual Tool that you can use to execute
+    querys
+  - Shows the Docs of your schemas and types
+  - Really helps development
+
+## Architeture
+
+* Client -> Express/GraphQL Server
+  -> Database
+
+* Outside server or third party API
+* Client -> Express/GraphQL Server
+--> Outside Server #1 -> Database
+--> Outise API
+--> Outside Server #2 -> Database
+
+* Async resolve
+  - client requests
+  - executes resolver
+  - if it return a promise, it waits
+    for the promise to resolve and 
+    returns its value
+  - it can fetch any type of data
