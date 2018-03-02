@@ -323,4 +323,21 @@ mutation {
     - What comunicates with graphQL
     - Default route /graphql
 
+* Strategy
+  1 - Identify data required
+  2 - Write query in GraphiQL (for practice) and in component file
+  3 - Bond query + component
+  4 - Access data
 
+* With Apollo client you don't have to define a moment to execute the query, you just place it there and apollo client will execute it
+
+* graphql-tag
+  - helper to write querys
+  - online defines, doesn't executes
+
+* Events
+  - Component Rendered
+  - Query Executation
+  - Query Complete
+  - Render Component
+ 
