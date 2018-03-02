@@ -340,4 +340,14 @@ mutation {
   - Query Executation
   - Query Complete
   - Render Component
- 
+
+* Architeture
+  - GraphQL Server
+  - Apollo Store
+  - React
+    - Apollo Provider
+    - Router
+    - Root
+    - Query (pass down as props)
+    - SongList
+      - Presatational components
