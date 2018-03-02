@@ -351,3 +351,16 @@ mutation {
     - Query (pass down as props)
     - SongList
       - Presatational components
+
+* Mutation
+```
+mutation AddSong($title: String) {
+  addSong(title: $title) {
+    id
+    title
+  }
+}
+```
+- Mutation as a function with params
+- Naming for client only
+- Uses query variables
