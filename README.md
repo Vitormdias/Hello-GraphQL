@@ -289,3 +289,38 @@ mutation {
   - Resolvers File
   - Not a bad decision, just a different
     one
+
+## Client Side
+
+* Ex app: Song writing app
+  - Song Index Page
+  - Song Detail Page
+    - User can add lyrics to the song
+    - Like lyrics
+
+* Architeture
+  - Webpack - GraphQL
+  - Express
+  - MongoDB
+
+* Always look in to the Docs to familiarize with the project
+
+* React App
+  - Apollo Provider > Our React App
+  - Apollo Store
+  - GraphQL Server
+
+* Apollo Provider
+  - React component
+  - client is a reference of the apollo store
+
+* Apollo Store
+  - Comunicate with graphl
+  - Storing data, doesn't care
+    the tech being used (react for ex)
+  - Standalone
+  * Apollo Client
+    - What comunicates with graphQL
+    - Default route /graphql
+
+
